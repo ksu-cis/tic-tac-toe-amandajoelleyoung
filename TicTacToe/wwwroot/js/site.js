@@ -3,6 +3,14 @@
 
 // Write your Javascript code.
 
+var form = document.getElementById("board");
+var cells = document.getElementsByClassName("cell");
+for (i = 0; i < cells.length; i++) {
+    cells[i].addEventListener(event =>)
+}
+
+
+/*
 var turn = "x";
 
 function setTurn() {
@@ -72,3 +80,4 @@ for (i = 0; i < cells.length; i++) {
 }
 
 setTurn();
+*/
