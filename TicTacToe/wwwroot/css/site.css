@@ -9,35 +9,10 @@ body {
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     display: block;
-    width: 302px;
     margin: 0 auto;
     padding: 0;
-    overflow: hidden;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
-}
 
 #grid{
     display: grid;
@@ -53,29 +28,30 @@ body {
     text-align: center;
 }
 
-.board {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+#board {
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(8, 50px);
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    height: 30%;
+#board > .square {
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
 }
 
-.board > .row:nth-child(2){
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.red {
+    background-color: red;
 }
 
-.board > .row > .cell:nth-child(2){
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+.black {
+    background-color: black;
 }
 
-.cell{
-    width: 100px;
-    height: 100px;
+.checker {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 25px;
+    border: 1px solid gray;
 }
